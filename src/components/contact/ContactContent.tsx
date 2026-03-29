@@ -110,7 +110,7 @@ export default function ContactContent() {
 
     const formData = new FormData(e.currentTarget);
     try {
-      const response = await fetch("https://formspree.io/f/xpzyklno", {
+      const response = await fetch("https://formspree.io/f/mjgpyaqv", {
         method: "POST",
         body: formData,
         headers: { Accept: "application/json" },
