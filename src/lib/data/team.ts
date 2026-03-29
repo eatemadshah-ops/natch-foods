@@ -6,9 +6,14 @@ export interface TeamMember {
 
 export const team: TeamMember[] = [
   {
-    name: "Shah",
-    role: "Founder & CEO",
-    bio: "A seasoned international trade professional with deep expertise in food distribution across the Middle East and North America. Shah founded Natch Foods to bring the world's finest packaged foods to discerning markets.",
+    name: "Ali Reza",
+    role: "Co-Founder & CEO",
+    bio: "A visionary entrepreneur with deep roots in international food trade and distribution. Ali Reza co-founded Natch Foods to build a world-class bridge between premium global producers and the high-growth markets of the Middle East and United States.",
+  },
+  {
+    name: "Shah Yar",
+    role: "Co-Founder & COO",
+    bio: "A seasoned operations and trade professional overseeing the day-to-day execution of Natch Foods' global supply chain. Shah Yar ensures every shipment is compliant, on-time, and meets the company's exacting quality standards.",
   },
   {
     name: "Kenji Yamamoto",
