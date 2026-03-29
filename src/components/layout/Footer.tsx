@@ -9,10 +9,11 @@ const quickLinks = [
 ];
 
 const productLinks = [
-  { name: "Spices & Seasonings", href: "/products?category=spices" },
-  { name: "Grains & Pulses", href: "/products?category=grains" },
-  { name: "Snacks", href: "/products?category=snacks" },
-  { name: "Beverages", href: "/products?category=beverages" },
+  { name: "Wine", href: "/products?category=Wine" },
+  { name: "Coffee & Tea", href: "/products?category=Coffee+%26+Tea" },
+  { name: "Olive Oil", href: "/products?category=Olive+Oil" },
+  { name: "Spices & Condiments", href: "/products?category=Spices+%26+Condiments" },
+  { name: "Canned & Packaged", href: "/products?category=Canned+%26+Packaged" },
 ];
 
 export default function Footer() {
@@ -23,9 +24,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-white font-heading font-bold text-lg">
-                N
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.svg" alt="Natch Foods logo" width={40} height={40} />
               <span className="font-heading text-xl font-bold">
                 Natch Foods
               </span>
@@ -81,11 +81,13 @@ export default function Footer() {
             </h3>
             <div className="space-y-3 text-sm text-white/70">
               <p>info@natchfoods.com</p>
-              <p>+1 (555) 123-4567</p>
+              <p>+1 (917) 283-2683</p>
               <p>
-                123 Trade Avenue
+                Natch Foods LLC
                 <br />
-                New York, NY 10001
+                401 Park Ave South, 10th Floor
+                <br />
+                New York, NY 10016
               </p>
             </div>
             <div className="mt-4 flex gap-4">

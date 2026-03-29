@@ -6,24 +6,63 @@ export interface TeamMember {
 
 export const team: TeamMember[] = [
   {
-    name: "Shah Patel",
+    name: "Shah",
     role: "Founder & CEO",
-    bio: "With deep expertise in international trade and a passion for quality food, Shah founded Natch Foods to bridge global food markets.",
+    bio: "A seasoned international trade professional with deep expertise in food distribution across the Middle East and North America. Shah founded Natch Foods to bring the world's finest packaged foods to discerning markets.",
   },
   {
-    name: "Maria Santos",
-    role: "Director of Operations",
-    bio: "Maria oversees logistics and supply chain management, ensuring seamless delivery across continents.",
+    name: "Kenji Yamamoto",
+    role: "Head of Asia-Pacific Sourcing",
+    bio: "Based in Tokyo, Kenji manages supplier relationships across Japan and Thailand, ensuring every product meets Natch Foods' strict quality and compliance standards before export.",
   },
   {
-    name: "James Chen",
-    role: "Head of Quality Assurance",
-    bio: "James brings 15 years of food safety experience, maintaining the highest standards across our product lines.",
+    name: "Isabelle Moreau",
+    role: "Director of European Affairs",
+    bio: "A Paris-based trade specialist with 12 years in European food certification and export logistics. Isabelle oversees all procurement from France, Italy, Germany, and the Netherlands.",
   },
   {
-    name: "Amina Osei",
-    role: "Business Development Manager",
-    bio: "Amina cultivates partnerships with producers and buyers worldwide, expanding our global network.",
+    name: "Omar Al-Rashid",
+    role: "Regional Director — Middle East",
+    bio: "With strong relationships across the GCC, Omar leads Natch Foods' distribution strategy in the UAE, Saudi Arabia, and Kuwait — ensuring seamless market entry for every product line.",
+  },
+];
+
+export const milestones = [
+  {
+    year: "Q1 2024",
+    title: "Founded in New York",
+    description:
+      "Natch Foods LLC was incorporated in New York City with a clear mandate: connect premium food producers in Europe and Asia with buyers in the Middle East and United States.",
+  },
+  {
+    year: "Q3 2024",
+    title: "First European Partnerships",
+    description:
+      "Secured exclusive supply agreements with producers in Italy, France, and Japan. Completed the company's first export shipments — Italian olive oils and wines — to UAE wholesale distributors.",
+  },
+  {
+    year: "Q4 2024",
+    title: "$3M in First-Year Revenue",
+    description:
+      "Closed 2024 with $3M in revenue and an expanded sourcing portfolio including Germany, Thailand, and the Netherlands. Onboarded 20+ distribution partners across the Gulf region.",
+  },
+  {
+    year: "Q2 2025",
+    title: "GCC Retail Expansion",
+    description:
+      "Signed agreements with major retail chains across Saudi Arabia, UAE, and Kuwait, placing Natch Foods products on shelves in over 300 stores across the Gulf Cooperation Council.",
+  },
+  {
+    year: "Q3 2025",
+    title: "U.S. Distribution Launch",
+    description:
+      "Launched a U.S. domestic distribution division, partnering with specialty grocery retailers and importers along the East Coast to bring select Asian and European product lines to American consumers.",
+  },
+  {
+    year: "Q4 2025",
+    title: "$10M+ Annual Revenue",
+    description:
+      "Surpassed $10 million in annual revenue — a milestone achieved within two years of founding. Recognized by the New York Chamber of Commerce as an emerging leader in specialty food import/export.",
   },
 ];
 
@@ -31,21 +70,21 @@ export const values = [
   {
     title: "Quality First",
     description:
-      "Every product undergoes rigorous quality checks before it reaches our partners.",
+      "Every product is sourced directly from vetted producers and inspected against international food safety standards before it moves anywhere.",
   },
   {
     title: "Global Reach",
     description:
-      "We connect producers and buyers across 30+ countries, bridging cultures through food.",
+      "We export from 7 countries and serve buyers across the Middle East and United States — bridging cultures through food.",
   },
   {
-    title: "Sustainability",
+    title: "Trusted Partnerships",
     description:
-      "We prioritize responsible sourcing, eco-friendly packaging, and ethical trade practices.",
+      "We build long-term relationships with producers and buyers alike. Reliability and transparency are non-negotiable in every deal we make.",
   },
   {
-    title: "Transparency",
+    title: "Compliance & Integrity",
     description:
-      "Full traceability from source to shelf. We believe in open, honest partnerships.",
+      "Full traceability from source to shelf. Every shipment is backed by proper documentation, certifications, and regulatory compliance.",
   },
 ];

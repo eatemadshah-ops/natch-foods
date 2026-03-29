@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTABanner from "@/components/home/CTABanner";
-import { team, values } from "@/lib/data/team";
+import { team, values, milestones } from "@/lib/data/team";
 
 const missionCards = [
   {
@@ -79,22 +79,22 @@ export default function AboutContent() {
               </h2>
               <div className="mt-6 space-y-4 text-charcoal/70 leading-relaxed">
                 <p>
-                  Natch Foods was founded with a simple belief: the world
-                  deserves access to quality food, no matter where it comes from
-                  or where it&apos;s going. What started as a small operation
-                  connecting local producers with international buyers has grown
-                  into a trusted global food trade company.
+                  Founded in New York City in 2024, Natch Foods was built on a simple
+                  conviction: the world&apos;s finest packaged foods should move
+                  freely and reliably between the producers who create them and
+                  the markets that demand them.
                 </p>
                 <p>
-                  Today, we work with over 150 partners across 30+ countries,
-                  moving premium packaged food products — from aromatic spices
-                  and ancient grains to artisan snacks and specialty beverages —
-                  across borders with reliability and care.
+                  We source directly from trusted producers in Japan, Thailand,
+                  France, Italy, Germany, the Netherlands, and the United States
+                  — exporting premium wines, olive oils, coffees, spices, and
+                  specialty packaged goods into the Middle East and U.S. markets.
                 </p>
                 <p>
-                  Our team combines deep expertise in international trade,
-                  food safety, and logistics to ensure every product meets the
-                  highest standards before it reaches your shelves.
+                  In under two years, Natch Foods has crossed $10 million in
+                  annual revenue, placed products in 300+ retail doors across
+                  the Gulf and East Coast, and built the kind of supplier
+                  relationships that take most companies a decade to establish.
                 </p>
               </div>
             </motion.div>
@@ -115,6 +115,41 @@ export default function AboutContent() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Milestones */}
+      <section className="bg-wheat/50 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeading
+            title="Our Journey"
+            subtitle="From founding to $10M+ — two years of focused growth."
+          />
+          <div className="relative ml-4 border-l-2 border-gold/30 pl-8 space-y-10">
+            {milestones.map((m, i) => (
+              <motion.div
+                key={m.year}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="relative"
+              >
+                <div className="absolute -left-11 flex h-6 w-6 items-center justify-center rounded-full bg-gold ring-4 ring-wheat/50">
+                  <div className="h-2 w-2 rounded-full bg-white" />
+                </div>
+                <span className="text-xs font-semibold uppercase tracking-widest text-gold">
+                  {m.year}
+                </span>
+                <h3 className="mt-1 font-heading text-lg font-bold text-charcoal">
+                  {m.title}
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-charcoal/60">
+                  {m.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

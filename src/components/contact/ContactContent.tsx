@@ -22,13 +22,13 @@ const contactInfo = [
   {
     icon: PhoneIcon,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+1 (917) 283-2683",
+    href: "tel:+19172832683",
   },
   {
     icon: MapPinIcon,
     label: "Address",
-    value: "123 Trade Avenue\nNew York, NY 10001",
+    value: "Natch Foods LLC\n401 Park Ave South, 10th Floor\nNew York, NY 10016",
   },
   {
     icon: ClockIcon,
@@ -108,9 +108,21 @@ export default function ContactContent() {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate form submission (replace with Formspree endpoint)
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setSubmitted(true);
+    const formData = new FormData(e.currentTarget);
+    try {
+      const response = await fetch("https://formspree.io/f/xpzyklno", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("There was an error sending your message. Please try again.");
+      }
+    } catch {
+      alert("There was an error sending your message. Please check your connection.");
+    }
     setLoading(false);
   }
 
@@ -187,6 +199,7 @@ export default function ContactContent() {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         required
                         className="w-full rounded-xl border border-sage/30 px-4 py-3 text-sm text-charcoal outline-none transition-colors focus:border-forest focus:ring-1 focus:ring-forest"
                         placeholder="Your name"
@@ -198,6 +211,7 @@ export default function ContactContent() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         required
                         className="w-full rounded-xl border border-sage/30 px-4 py-3 text-sm text-charcoal outline-none transition-colors focus:border-forest focus:ring-1 focus:ring-forest"
                         placeholder="you@company.com"
@@ -214,6 +228,7 @@ export default function ContactContent() {
                         type="text"
                         className="w-full rounded-xl border border-sage/30 px-4 py-3 text-sm text-charcoal outline-none transition-colors focus:border-forest focus:ring-1 focus:ring-forest"
                         placeholder="Your company"
+                        name="company"
                       />
                     </div>
                     <div>
@@ -224,6 +239,7 @@ export default function ContactContent() {
                         type="tel"
                         className="w-full rounded-xl border border-sage/30 px-4 py-3 text-sm text-charcoal outline-none transition-colors focus:border-forest focus:ring-1 focus:ring-forest"
                         placeholder="+1 (555) 000-0000"
+                        name="phone"
                       />
                     </div>
                   </div>
@@ -234,6 +250,7 @@ export default function ContactContent() {
                     </label>
                     <select
                       required
+                      name="subject"
                       className="w-full rounded-xl border border-sage/30 px-4 py-3 text-sm text-charcoal outline-none transition-colors focus:border-forest focus:ring-1 focus:ring-forest"
                     >
                       <option value="">Select a subject</option>
@@ -251,6 +268,7 @@ export default function ContactContent() {
                     </label>
                     <textarea
                       required
+                      name="message"
                       rows={5}
                       className="w-full rounded-xl border border-sage/30 px-4 py-3 text-sm text-charcoal outline-none transition-colors focus:border-forest focus:ring-1 focus:ring-forest resize-none"
                       placeholder="Tell us about your needs..."

@@ -4,17 +4,19 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { value: 30, suffix: "+", label: "Countries Served" },
-  { value: 200, suffix: "+", label: "Product Lines" },
-  { value: 12, suffix: "+", label: "Years Experience" },
-  { value: 150, suffix: "+", label: "Trade Partners" },
+  { prefix: "", value: 7, suffix: "", label: "Export Countries" },
+  { prefix: "", value: 50, suffix: "+", label: "Product Lines" },
+  { prefix: "$", value: 10, suffix: "M+", label: "Annual Revenue" },
+  { prefix: "", value: 300, suffix: "+", label: "Retail Doors" },
 ];
 
 function AnimatedCounter({
+  prefix,
   target,
   suffix,
   inView,
 }: {
+  prefix: string;
   target: number;
   suffix: string;
   inView: boolean;
@@ -40,6 +42,7 @@ function AnimatedCounter({
 
   return (
     <span>
+      {prefix}
       {count}
       {suffix}
     </span>
@@ -65,6 +68,7 @@ export default function StatsBar() {
             >
               <p className="font-heading text-4xl font-bold text-forest sm:text-5xl">
                 <AnimatedCounter
+                  prefix={stat.prefix}
                   target={stat.value}
                   suffix={stat.suffix}
                   inView={inView}

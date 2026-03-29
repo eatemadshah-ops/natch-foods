@@ -23,9 +23,8 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-forest text-white font-heading font-bold text-lg">
-            N
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="Natch Foods logo" width={40} height={40} />
           <span className="font-heading text-xl font-bold text-forest">
             Natch Foods
           </span>
